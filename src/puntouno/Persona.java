@@ -48,9 +48,7 @@ public class Persona {
     public String toString() {
         String texto = "Hola " + this.Nombre + ", Estos son tus carros: ";
         
-        for (Carro carro : carros) {
-            texto += "\n>> " + carro.toString();
-        }
+        texto = carros.stream().map((carro) -> "\n>> " + carro.toString()).reduce(texto, String::concat);
         
         return texto;
     }
