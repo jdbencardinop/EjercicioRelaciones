@@ -22,4 +22,8 @@ public class Category extends DomainObject {
         this.Description = Description;
         this.Products = new ArrayList<>();
     }
+    
+    public void AddProduct (Product product) {
+        this.Products.add(product);
+    }
 }
