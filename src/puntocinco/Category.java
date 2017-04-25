@@ -9,7 +9,13 @@ package puntocinco;
  *
  * @author Familia
  */
-public class Category {
+public class Category extends DomainObject {
     private String Name;
     private String Description;
+
+    public Category(String Name, String Description, String ID) {
+        super(ID);
+        this.Name = Name;
+        this.Description = Description;
+    }
 }

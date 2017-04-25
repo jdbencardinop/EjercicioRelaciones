@@ -9,7 +9,13 @@ package puntocinco;
  *
  * @author Familia
  */
-public class Item {
+public class Item extends DomainObject {
     private String Name;
     private double UnitCost;
+
+    public Item(String Name, double UnitCost, String ID) {
+        super(ID);
+        this.Name = Name;
+        this.UnitCost = UnitCost;
+    }
 }

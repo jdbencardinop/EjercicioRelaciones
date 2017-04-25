@@ -11,4 +11,16 @@ package puntocinco;
  */
 public class DomainObject {
     private String ID;
+
+    public DomainObject(String ID) {
+        this.ID = ID;
+    }
+
+    public String getID() {
+        return ID;
+    }
+
+    public void setID(String ID) {
+        this.ID = ID;
+    }
 }
