@@ -5,6 +5,8 @@
  */
 package puntocinco;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Familia
@@ -12,10 +14,12 @@ package puntocinco;
 public class Category extends DomainObject {
     private String Name;
     private String Description;
+    private ArrayList<Product> Products;
 
-    public Category(String Name, String Description, String ID) {
+    public Category(String Name, String Description, ArrayList<Product> Products, String ID) {
         super(ID);
         this.Name = Name;
         this.Description = Description;
+        this.Products = new ArrayList<>();
     }
 }
