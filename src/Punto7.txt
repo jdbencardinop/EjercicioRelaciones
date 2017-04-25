@@ -1,0 +1,38 @@
+Punto 7
+
+a)	El resultado en consola es:
+
+		performs Person’s task		Constructor de Persona
+		invoke Employee’s			Constructor de Empleado #2
+		performs Employee’s task		Constructor de Empleado #1
+		performs Faculty’s task		Constructor de Faculty
+
+El resultado se debe a que en el main se crea un objeto de tipo Faculty (hereda de la clase Employee), en 
+cuyo constructor se llama de forma predeterminada al constructor de la clase 
+Employee (hereda de la clase Person), que a su vez llama a un segundo constructor 
+y al constructor de la clase Person, cada constructor imprime una linea de código.
+
+b)	El resultado en consola es: 
+		
+		G	toString de G
+		G1	método1 de G
+		G2	método2 de G
+
+		F	 toString de F (se re-define el método toString de G)
+		G1	método1 de G(heredado)
+		F2	método2 de F(se re-define el método 2 de G)
+		G2	adentro del metodo2 de F se llama al metodo2 de G
+
+		F	toString de F (heredado de F)
+		H1	método1 de H(se re-define el metodo1 de F)
+		E2	método2 de E(se re-define el metodo2 de F)
+		H1	adentro del método2 de E se llama al método1 de H
+
+		F	toString de F (heredado de F)
+		G1	método1 de G (heredado de G)	
+		E2	método2 de E (se re-define el método 2 de F)
+		G1	adentro del método2 se vuelve a llamar al método1 de G
+	
+El resultado se debe a que en el main se crea un arreglo de elementos de tipo G 
+(un G, un F, un H y un E), luego mediante un ciclo se invoca el método 
+toString , los métodos 1 y 2 y una linea 	en blanco, para cada elemento en el arreglo.
