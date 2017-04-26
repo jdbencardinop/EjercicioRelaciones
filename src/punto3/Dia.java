@@ -5,17 +5,43 @@
  */
 package punto3;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 /**
  *
  * @author juan sebastian
  */
 public class Dia {
-    int dia [];
+    Date dia = new Date();
     String name;
+    private ArrayList <Segmento>segmentos;
 
-    public Dia(int[] dia, String name) {
+    public Dia(Date dia, String name) {
         this.dia = dia;
         this.name = name;
+        segmentos=null;
     }
+    
+    public void addSeg(){
+        
+    }
+
+    @Override
+    public String toString() {
+        return (this.dia.toString());
+        
+    }
+
+    public Date getDia() {
+        return dia;
+    }
+
+    public void setDia(Date dia) {
+        this.dia = dia;
+    }
+    
+    
+  
     
 }
