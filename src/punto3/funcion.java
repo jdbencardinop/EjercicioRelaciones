@@ -11,7 +11,7 @@ package punto3;
  */
 public class funcion {
     String nombre;
-    String describcion;
+    String descripcion;
     Segmento segmento;
     
     

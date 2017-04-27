@@ -18,8 +18,8 @@ public class Main {
     boolean vacio=false, ocupado=true;
     
        
-    Segmento c1= new Segmento(3, 6,ocupado);
-    System.out.println(c1.toString());
+    //Segmento c1= new Segmento(3, 6,ocupado);
+    System.out.println();
         
     }
     

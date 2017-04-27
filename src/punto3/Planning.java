@@ -15,6 +15,14 @@ public class Planning {
     
     ArrayList <Sala> salas;
 
+    public Planning(ArrayList<Sala> salas) {
+        this.salas = salas;
+    }
+    
+    public void addSalas(Sala sala){
+        this.salas.add(sala);
+    }
+
     @Override
     public String toString() {
         String info=" Planning  ";
@@ -24,6 +32,5 @@ public class Planning {
         }
         return info;
     }
-    
     
 }
