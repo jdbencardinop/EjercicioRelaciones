@@ -5,19 +5,57 @@
  */
 package punto3;
 
+import java.util.Date;
+
 /**
  *
  * @author juan sebastian
  */
 public class Segmento {
-    private int inicio [];
-    private int fin [] ;
+    private Date inicio ;
+    private Date fin  ;
+    private boolean funcion;
+   
 
-    public Segmento(int[] inicio, int[] fin) {
+    public Segmento(int inicio, int fin,boolean funcion) {
+       this.funcion=funcion;
+        this.inicio= new Date();
+        this.fin= new Date();
+        this.inicio.setHours(inicio);
+        //System.out.println( "inicio " +this.inicio.toString()+"   fin "+this.fin.toString());
+        this.fin.setHours(fin);
+      
+    }
+
+    @Override
+    public String toString() {
+        return ("segmento "+ this.inicio.getHours()+" - "+this.fin.getHours());
+    } 
+
+    public Date getInicio() {
+        return inicio;
+    }
+
+    public void setInicio(Date inicio) {
         this.inicio = inicio;
+    }
+
+    public Date getFin() {
+        return fin;
+    }
+
+    public void setFin(Date fin) {
         this.fin = fin;
+    }
+
+    public boolean isFuncion() {
+        return funcion;
+    }
+
+    public void setFuncion(boolean funcion) {
+        this.funcion = funcion;
     }
     
     
-    
+     
 }

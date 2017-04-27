@@ -5,10 +5,24 @@
  */
 package punto3;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author juan sebastian
  */
-public class Sala {
+public class Sala {    
+    ArrayList<Semana>semanas;
+
+    @Override
+    public String toString() {
+        String info ="Sala ";
+        for (Semana semana : semanas) {
+            info+= ("\n"+ semana.toString());
+        }
+        return info;
+    }
+    
+    
     
 }

@@ -16,15 +16,22 @@ public class Person {
     private String id;
     private ArrayList <Pet>pet;
 
-    public Person(String name, String id, ArrayList<Pet> pet) {
+    public Person(String name, String id ) {
         this.name = name;
         this.id = id;
-        this.pet = pet;
+        this.pet = new ArrayList();
     }
     
+    public void addPet(Pet pet){
+        this.pet.add(pet);  
+    }
     
-    
-    public void showPets(){
-        
+    public String showPets(){
+        String info= " "; 
+        for(Pet i:pet){
+           info+= ("\nl  id: "+i.getId()+"nombre: "+i.getName());
+        }
+         
+        return (info);
     }
 }

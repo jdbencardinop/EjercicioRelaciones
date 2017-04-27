@@ -20,16 +20,30 @@ public class Dia {
     public Dia(Date dia, String name) {
         this.dia = dia;
         this.name = name;
-        segmentos=null;
+        segmentos= new ArrayList();
     }
     
-    public void addSeg(){
+    public void addSeg(Segmento segmento){
+        this.segmentos.add(segmento);
         
+    }
+    public String SegmentoLibre(){
+        String info="segmento libres";
+        for (Segmento segmento : segmentos) {
+            if(!segmento.isFuncion()){
+                info+=(" \n"+ segmento.toString());
+            }
+        }
+        return info;
     }
 
     @Override
     public String toString() {
-        return (this.dia.toString());
+        String info= this.dia.toString();
+        for (Segmento segmento : segmentos) {
+            info+= "\n"+segmento.toString();
+        }
+        return info;
         
     }
 
@@ -39,6 +53,22 @@ public class Dia {
 
     public void setDia(Date dia) {
         this.dia = dia;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public ArrayList<Segmento> getSegmentos() {
+        return segmentos;
+    }
+
+    public void setSegmentos(ArrayList<Segmento> segmentos) {
+        this.segmentos = segmentos;
     }
     
     

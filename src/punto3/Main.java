@@ -6,24 +6,23 @@
 package punto3;
 
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Scanner;
 
 /**
  *
  * @author juan sebastian
  */
-public class Planning {
+public class Main {
+    public static void main (String args []){
+    boolean vacio=false, ocupado=true;
     
-    ArrayList <Sala> salas;
-
-    @Override
-    public String toString() {
-        String info=" Planning  ";
-        for (Sala sala : salas) {
-            info+="\n"+sala.toString();
-            
-        }
-        return info;
+       
+    Segmento c1= new Segmento(3, 6,ocupado);
+    System.out.println(c1.toString());
+        
     }
+    
     
     
 }
