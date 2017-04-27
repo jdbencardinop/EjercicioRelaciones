@@ -19,7 +19,7 @@ public class Cat extends Pet{
 
     @Override
     public String sound() {
-        return " miau"; //To change body of generated methods, choose Tools | Templates.
+        return " miau"; 
     }
     
     
